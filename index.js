@@ -15,7 +15,7 @@ app.use(cors())
 
 app.route("/").get((req, res)=>{
     return res.status(200).json({
-        msg: "Hello from home route"
+        msg: "Server up and running"
     })
 })
 
