@@ -4,6 +4,8 @@ import cors from "cors"
 
 import askGPT from "./openAI/gpt.js";
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 
 app.use(morgan('dev'));
@@ -30,6 +32,6 @@ app.route("/gpt").post( async (req, res)=>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log("server running on port: ", 3000);
+app.listen(PORT, ()=>{
+    console.log("server running on port: ", PORT);
 })
