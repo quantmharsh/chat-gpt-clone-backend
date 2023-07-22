@@ -19,6 +19,12 @@ app.route("/").get((req, res)=>{
     })
 })
 
+app.route("/health").get((req, res)=>{
+    return res.status(200).json({
+        msg: `Server running on PORT: ${PORT}`
+    })
+})
+
 app.route("/gpt").post( async (req, res)=>{
     const body = req.body;
 
